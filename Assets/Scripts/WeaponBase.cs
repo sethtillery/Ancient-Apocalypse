@@ -9,7 +9,6 @@ public abstract class WeaponBase : MonoBehaviour
 
     public WeaponStats weaponStats;
 
-    public float TimeToAttack = 1f;
     float timer;
 
     public void Update()
@@ -19,14 +18,13 @@ public abstract class WeaponBase : MonoBehaviour
         if(timer < 0f)
         {
             Attack();
-            timer = TimeToAttack;
+            timer = weaponStats.timeToAttack;
         }
     }
 
     public virtual void SetData(weaponData weapon)
     {
         weaponData = weapon;
-        TimeToAttack = weaponData.stats.timeToAttack;
 
         weaponStats = new WeaponStats(weapon.stats.damage, weapon.stats.timeToAttack);
     }
@@ -36,5 +34,10 @@ public abstract class WeaponBase : MonoBehaviour
     public virtual void PostDamage(int damage, Vector3 targetPosition)
     {
         MessageSystem.instance.PostMessage(damage.ToString(), targetPosition);
+    }
+
+    internal void Upgrade(UpgradeData upgradeData)
+    {
+        weaponStats.Sum(upgradeData.weaponUpgradeStats);
     }
 }

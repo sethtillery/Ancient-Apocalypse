@@ -13,6 +13,9 @@ MonoBehaviour:
   m_Name: Sword (more damage)
   m_EditorClassIdentifier: 
   upgradeType: 0
-  Name: test2
+  Name: more damage
   icon: {fileID: 21300000, guid: 040f0016fe14fc14a9456c1702d4e49c, type: 3}
   weaponData: {fileID: 11400000, guid: e7b1527966cf6044a81733d56a83de10, type: 2}
+  weaponUpgradeStats:
+    damage: 2
+    timeToAttack: 0

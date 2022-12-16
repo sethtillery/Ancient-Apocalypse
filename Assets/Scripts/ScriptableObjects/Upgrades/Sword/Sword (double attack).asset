@@ -10,9 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7bcf3a644025c404bb7b275166ba0d94, type: 3}
-  m_Name: Sword (even more damage)
+  m_Name: Sword (double attack)
   m_EditorClassIdentifier: 
   upgradeType: 0
-  Name: test3
+  Name: double attack
   icon: {fileID: 21300000, guid: 040f0016fe14fc14a9456c1702d4e49c, type: 3}
   weaponData: {fileID: 11400000, guid: e7b1527966cf6044a81733d56a83de10, type: 2}
+  weaponStats:
+    damage: 0
+    timeToAttack: 0

@@ -95,5 +95,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9e0f90c350c75442a053f2db4ef4e32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  weaponData: {fileID: 0}
+  weaponStats:
+    damage: 4
+    timeToAttack: 3
   speed: 6
   damageSize: 0.7
+  damage: 4

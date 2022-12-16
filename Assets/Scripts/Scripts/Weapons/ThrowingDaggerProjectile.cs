@@ -2,12 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ThrowingDaggerProjectile : MonoBehaviour
+public class ThrowingDaggerProjectile : WeaponBase
 {
     Vector3 direction;
 
     [SerializeField] float speed;
     [SerializeField] float damageSize = 0.7f;
+    public int damage = 4;
 
     bool hitDetected = false;
 
@@ -24,7 +25,8 @@ public class ThrowingDaggerProjectile : MonoBehaviour
                 Enemy enemy = c.GetComponent<Enemy>();
                 if (enemy != null)
                 {
-                    enemy.TakeDamage(2);
+                    enemy.TakeDamage(damage);
+                    PostDamage(weaponStats.damage, enemy.transform.position);
                     hitDetected = true;
                     break;
                 }
@@ -60,5 +62,10 @@ public class ThrowingDaggerProjectile : MonoBehaviour
             rotate.z = transform.rotation.z * -5.5f;
             transform.localRotation = rotate;
         }
+    }
+
+    public override void Attack()
+    {
+        throw new System.NotImplementedException();
     }
 }
