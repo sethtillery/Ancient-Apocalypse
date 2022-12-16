@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2df1f6bf222a4f543a976cd6cc036820, type: 3}
+  m_Name: Sword
+  m_EditorClassIdentifier: 
+  Name: Sword
+  stats:
+    damage: 2
+    timeToAttack: 1.5
+  weaponBasePrefab: {fileID: 1896120085776933188, guid: d98d5fb098ddc674fb5c7506a1e3392f, type: 3}
+  upgrades:
+  - {fileID: 11400000, guid: a551d1550e60a3045a610764f703ccba, type: 2}
+  - {fileID: 11400000, guid: 43c8b1063f9da6643aa8bf5304aa81a8, type: 2}
+  - {fileID: 11400000, guid: 2cc691a1a21c2d8448f6b2c8de82b841, type: 2}
