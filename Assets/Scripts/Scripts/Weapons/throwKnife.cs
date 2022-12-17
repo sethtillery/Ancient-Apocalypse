@@ -8,6 +8,7 @@ public class throwKnife : WeaponBase
     HeroKnight playerMove;
 
     [SerializeField] GameObject knifePrefab;
+    [SerializeField] float spread = 0.5f;
 
     private void Awake()
     {
@@ -18,13 +19,38 @@ public class throwKnife : WeaponBase
 
     public override void Attack()
     {
-        GameObject thrownKnife = Instantiate(knifePrefab);
-        thrownKnife.transform.position = playerMove.transform.position;
-        ThrowingDaggerProjectile throwingDaggerProjectile = thrownKnife.GetComponent<ThrowingDaggerProjectile>();
-        throwingDaggerProjectile.damage = weaponStats.damage;
-        if (playerMove.movement.x == 0 && playerMove.movement.y != 0)
-            thrownKnife.GetComponent<ThrowingDaggerProjectile>().setDirection(0f, playerMove.lastVerticalVector);
-        else
-            thrownKnife.GetComponent<ThrowingDaggerProjectile>().setDirection(playerMove.lastHorizontalVector, 0f);     
+
+        for(int i = 0; i < weaponStats.numberOfAttacks; i++)
+        {
+            GameObject thrownKnife = Instantiate(knifePrefab);
+
+            Vector3 newKnifePosition = transform.position;
+
+            thrownKnife.transform.position = newKnifePosition;
+
+            ThrowingDaggerProjectile throwingDaggerProjectile = thrownKnife.GetComponent<ThrowingDaggerProjectile>();
+            throwingDaggerProjectile.damage = weaponStats.damage;
+            if (playerMove.movement.x == 0 && playerMove.movement.y != 0)
+            {
+                if (weaponStats.numberOfAttacks > 1)
+                {
+                    newKnifePosition.x -= (spread * (weaponStats.numberOfAttacks - 1)) / 2; //calculates offset
+                    newKnifePosition.x += i * spread; // spreads the knives
+                    thrownKnife.transform.position = newKnifePosition;
+                }
+                thrownKnife.GetComponent<ThrowingDaggerProjectile>().setDirection(0f, playerMove.lastVerticalVector);
+            }
+            else
+            {
+                if (weaponStats.numberOfAttacks > 1)
+                {
+                    newKnifePosition.y -= (spread * (weaponStats.numberOfAttacks - 1)) / 2; //calculates offset
+                    newKnifePosition.y += i * spread; // spreads the knives
+                    thrownKnife.transform.position = newKnifePosition;
+                }
+                thrownKnife.GetComponent<ThrowingDaggerProjectile>().setDirection(playerMove.lastHorizontalVector, 0f);     
+            }
+        }
+
     }
 }

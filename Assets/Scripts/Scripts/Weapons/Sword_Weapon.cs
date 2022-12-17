@@ -57,18 +57,37 @@ public class Sword_Weapon : WeaponBase
 
     public override void Attack()
     {
-        if (hero.lastHorizontalVector > 0)
+        StartCoroutine(AttackProcess());
+    }
+
+    IEnumerator AttackProcess()
+    {
+        for(int i = 0; i < weaponStats.numberOfAttacks; i++)
         {
-            colliders = Physics2D.OverlapBoxAll(swordRight.transform.position, swordSize, 0f);
-            ApplyDamage(colliders);
+            if (hero.lastHorizontalVector > 0)
+            {
+                colliders = Physics2D.OverlapBoxAll(swordRight.transform.position, swordSize, 0f);
+                ApplyDamage(colliders);
+            }
+
+            else
+            {
+               // Debug.Log("Swing left sword");
+                colliders = Physics2D.OverlapBoxAll(swordLeft.transform.position, swordSize, 0f);
+                ApplyDamage(colliders);
+            }
+
+            if (i == 0)
+            {
+                hero_anim.Play("Attack1");
+                yield return new WaitForSeconds(.5f);
+            }
+            if (i > 0)
+            {
+                hero_anim.Play("Attack2");
+                yield return new WaitForSeconds(.5f);
+            }
         }
 
-        else
-        {
-           // Debug.Log("Swing left sword");
-            colliders = Physics2D.OverlapBoxAll(swordLeft.transform.position, swordSize, 0f);
-            ApplyDamage(colliders);
-        }
-        hero_anim.Play("Attack1");
     }
 }

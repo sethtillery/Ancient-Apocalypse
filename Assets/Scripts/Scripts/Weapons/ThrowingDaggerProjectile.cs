@@ -10,6 +10,8 @@ public class ThrowingDaggerProjectile : WeaponBase
     [SerializeField] float damageSize = 0.7f;
     public int damage = 4;
 
+    float ttl = 6f;
+
     bool hitDetected = false;
 
     private void Update()
@@ -36,6 +38,12 @@ public class ThrowingDaggerProjectile : WeaponBase
             {
                 Destroy(gameObject);
             }
+        }
+
+        ttl -= Time.deltaTime;
+        if(ttl < 0f)
+        {
+            Destroy(gameObject);
         }
     }
     public void setDirection(float x, float y)

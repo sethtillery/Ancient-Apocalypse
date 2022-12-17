@@ -99,6 +99,7 @@ MonoBehaviour:
   weaponStats:
     damage: 4
     timeToAttack: 3
+    numberOfAttacks: 2
   speed: 6
-  damageSize: 0.7
+  damageSize: 0.6
   damage: 4

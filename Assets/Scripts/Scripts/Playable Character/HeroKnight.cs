@@ -89,7 +89,7 @@ public class HeroKnight : MonoBehaviour {
                     m_currentAttack = 1;
 
                 // Call one of three attack animations "Attack1", "Attack2", "Attack3"
-               // m_animator.SetTrigger("Attack" + m_currentAttack);
+                m_animator.SetTrigger("Attack" + m_currentAttack);
 
                 // Reset timer
                 m_timeSinceAttack = 0.0f;
