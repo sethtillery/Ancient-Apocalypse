@@ -9,8 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f1ed7074e1b986e47915448332083907, type: 3}
-  m_Name: Armor
+  m_Script: {fileID: 11500000, guid: 9b6a84cadf135c64f8d9abca73a8545b, type: 3}
+  m_Name: New Stage Data
   m_EditorClassIdentifier: 
-  Name: Armor
-  armor: 1
+  stageEvents: []

@@ -136,8 +136,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80bf2421687a5ec44a4d1dbb6ced0582, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dropItemPrefab: {fileID: 3231104320422132600, guid: c01617bffe69ce94895b10a53cc5441d, type: 3}
-  chance: 0.5
+  dropItemPrefab:
+  - {fileID: 7593463836688732537, guid: 0178fe5ee6adeec4a975f6ae47300b8e, type: 3}
+  - {fileID: 3231104320422132600, guid: c01617bffe69ce94895b10a53cc5441d, type: 3}
+  chance: 1
 --- !u!114 &-4733625475591336800
 MonoBehaviour:
   m_ObjectHideFlags: 0

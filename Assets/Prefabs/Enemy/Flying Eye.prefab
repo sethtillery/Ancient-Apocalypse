@@ -169,7 +169,7 @@ MonoBehaviour:
   speed: 2
   hp: 1
   enemyAnim: {fileID: 2239990612580791745}
-  damage: 1
+  damage: 3
 --- !u!114 &-449994529768074573
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -182,8 +182,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80bf2421687a5ec44a4d1dbb6ced0582, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dropItemPrefab: {fileID: 4383160534405541353, guid: 98573942700ff0549a59cd07ae6134da, type: 3}
-  chance: 0.759
+  dropItemPrefab:
+  - {fileID: 4383160534405541353, guid: 98573942700ff0549a59cd07ae6134da, type: 3}
+  chance: 1
 --- !u!114 &8749043964308277534
 MonoBehaviour:
   m_ObjectHideFlags: 0

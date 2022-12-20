@@ -17,5 +17,8 @@ public class UpgradeData : ScriptableObject
 
     public weaponData weaponData;
     public WeaponStats weaponUpgradeStats;
+
+    public Item item;
+    public ItemStats stats;
 }
 

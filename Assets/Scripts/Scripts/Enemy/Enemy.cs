@@ -13,7 +13,7 @@ public class Enemy : MonoBehaviour, Damageable
 
     [SerializeField] int hp = 1;
     [SerializeField] Animator enemyAnim;
-    [SerializeField] int damage = 1;
+    [SerializeField] int damage = 2;
     //[SerializeField] int expReward = 1;
 
     private void Start()
