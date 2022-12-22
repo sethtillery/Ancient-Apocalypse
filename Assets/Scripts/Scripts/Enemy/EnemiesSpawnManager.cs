@@ -9,6 +9,8 @@ public class EnemiesSpawnManager : MonoBehaviour
     [SerializeField] Vector2 spawnArea;
     [SerializeField] float spawnTimer;
     GameObject player;
+    float flyingEyeSpawnTime = 2f;
+    float mushroomSpawnTime = 5f;
 
     private void Start()
     {
@@ -26,6 +28,11 @@ public class EnemiesSpawnManager : MonoBehaviour
         newEnemy.transform.position = position;
         newEnemy.GetComponent<Enemy>().setTarget(player);
         newEnemy.transform.parent = transform;
+
+        if (enemy.tag == "eye")
+            spawnTimer = 2f;
+        else if (enemy.tag == "Mushroom")
+            spawnTimer = 5f;
     }
 
     private Vector3 GenerateRandomPosition()
@@ -55,7 +62,6 @@ public class EnemiesSpawnManager : MonoBehaviour
         if(spawnTimer <= 0)
         {
             spawnEnemy();
-            spawnTimer = 1f;
         }
 
     }

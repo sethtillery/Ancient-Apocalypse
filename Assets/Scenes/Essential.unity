@@ -4874,6 +4874,14 @@ PrefabInstance:
       propertyPath: gameOverPanel
       value: 
       objectReference: {fileID: 1076002506}
+    - target: {fileID: 1370287885, guid: 92c98e28397ce76408cc9673fb2236cd, type: 3}
+      propertyPath: maxHP
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 1370287885, guid: 92c98e28397ce76408cc9673fb2236cd, type: 3}
+      propertyPath: currentHp
+      value: 200
+      objectReference: {fileID: 0}
     - target: {fileID: 1502904050, guid: 92c98e28397ce76408cc9673fb2236cd, type: 3}
       propertyPath: startingWeapon
       value: 

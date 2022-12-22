@@ -8,6 +8,7 @@ public class Enemy : MonoBehaviour, Damageable
     GameObject targetGameObject;
     [SerializeField] float speed;
     CharacterStats targetCharacter;
+    Animator player_anim;
 
     Rigidbody2D r2d;
 
@@ -20,6 +21,7 @@ public class Enemy : MonoBehaviour, Damageable
     {
         r2d = GetComponent<Rigidbody2D>();
         targetCharacter = targetGameObject.GetComponent<CharacterStats>();
+        player_anim = GameObject.FindGameObjectWithTag("Player").GetComponent<Animator>();
     }
 
     public void setTarget(GameObject target)
@@ -60,6 +62,7 @@ public class Enemy : MonoBehaviour, Damageable
         {
             targetCharacter = targetGameObject.GetComponent<CharacterStats>();
             targetCharacter.TakeDamage(damage);
+            player_anim.Play("Hurt");
         }
 
     }
@@ -70,7 +73,7 @@ public class Enemy : MonoBehaviour, Damageable
 
         if(hp < 1)
         {
-            enemyAnim.Play("FlyingEyeDeath");
+            enemyAnim.Play("Death");
             GetComponent<DropOnDestroy>().CheckDrop();
            // targetCharacter.GetComponent<Level>().addExperience(expReward);
             Destroy(gameObject, .5f);
