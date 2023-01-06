@@ -24,11 +24,11 @@ public class ThrowingDaggerProjectile : WeaponBase
 
             foreach (Collider2D c in hit)
             {
-                Enemy enemy = c.GetComponent<Enemy>();
+                Damageable enemy = c.GetComponent<Damageable>();
                 if (enemy != null)
                 {
                     enemy.TakeDamage(damage);
-                    PostDamage(weaponStats.damage, enemy.transform.position);
+                    PostDamage(weaponStats.damage, transform.position);
                     hitDetected = true;
                     break;
                 }

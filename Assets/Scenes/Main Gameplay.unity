@@ -278,7 +278,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   toSpawn: {fileID: 6286688767486963832, guid: ad9568327b09b334492f660461aeac45, type: 3}
-  probability: 0.5
+  probability: 0.8
 --- !u!1 &479455973 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5515723963875923823, guid: bd708ab316816c84287c9d0beb51c691, type: 3}
@@ -1247,7 +1247,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   toSpawn: {fileID: 6286688767486963832, guid: ad9568327b09b334492f660461aeac45, type: 3}
-  probability: 0.5
+  probability: 0.73
 --- !u!114 &1590417141 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3201372183158449847, guid: f0a729c4dab62c14ebcff6c057ae8af3, type: 3}
@@ -1341,6 +1341,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerTilePosition: {x: 0, y: 0}
   tileSize: 20
+  character: {fileID: 0}
   terrainTileHorizontalCount: 4
   terrainTileVerticalCount: 3
   fieldOfVisionHeight: 3
@@ -1384,6 +1385,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   time: 0
+  timerUI: {fileID: 0}
 --- !u!114 &1976537244
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1539,6 +1541,10 @@ PrefabInstance:
     - target: {fileID: 3201372183158449846, guid: f0a729c4dab62c14ebcff6c057ae8af3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3201372183158449847, guid: f0a729c4dab62c14ebcff6c057ae8af3, type: 3}
+      propertyPath: probability
+      value: 0.79
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0a729c4dab62c14ebcff6c057ae8af3, type: 3}

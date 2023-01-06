@@ -5,11 +5,11 @@ using UnityEngine;
 public class StageTimer : MonoBehaviour
 {
     public float time;
-    TimerUI timerUI;
+    public TimerUI timerUI;
 
-    private void Awake()
+    private void Start()
     {
-        timerUI = FindObjectOfType<TimerUI>();
+        timerUI = GameObject.Find("TimerNumbers").GetComponent<TimerUI>();
         Time.timeScale = 1;
     }
 

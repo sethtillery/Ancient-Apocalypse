@@ -10,7 +10,7 @@ public class WorldScrolling : MonoBehaviour
     Vector2Int onTileGridPlayerPosition;
     [SerializeField] float tileSize;
     GameObject[,] terrainTiles;
-    CharacterStats character;
+    public CharacterStats character;
 
     [SerializeField] int terrainTileHorizontalCount;
     [SerializeField] int terrainTileVerticalCount;
@@ -21,11 +21,11 @@ public class WorldScrolling : MonoBehaviour
     private void Awake()
     {
         terrainTiles = new GameObject[terrainTileHorizontalCount, terrainTileVerticalCount];
-        character = GameObject.FindGameObjectWithTag("Player").GetComponent<CharacterStats>();
     }
 
     private void Start()
     {
+        character = FindObjectOfType<CharacterStats>();
         playerTransform = GameManager.instance.playerTransform;
     }
 
