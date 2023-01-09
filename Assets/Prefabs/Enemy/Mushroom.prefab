@@ -167,7 +167,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1.75
-  hp: 5
+  hp: 4
   enemyAnim: {fileID: 4317753751522298791}
   damage: 5
 --- !u!114 &4317753751522298795

@@ -7,14 +7,15 @@ public class UpgradeManager : MonoBehaviour
     [SerializeField] GameObject panel;
 
     [SerializeField] List<upgradeButton> upgradeButtons;
+    
 
     private void Start()
     {
-        HideButtons();
+        HideButtons();      
     }
 
     public void openPanel(List<UpgradeData> upgradeDatas)
-    {
+    {               
         Clean();
         panel.SetActive(true);
 

@@ -5,7 +5,7 @@ using UnityEngine;
 public class Level : MonoBehaviour
 {
     [SerializeField] int experience = 0;
-    [SerializeField] int level = 1;
+    public int currentLevel = 1;
     public int counter = 0;
     [SerializeField] ExpBar expBar;
     [SerializeField] UpgradeManager upgrade;
@@ -19,13 +19,16 @@ public class Level : MonoBehaviour
     passiveItems passiveItems;
 
     [SerializeField] List<UpgradeData> startUpgrades;
+    LevelCompletion levelCompletion;
 
     int TO_LEVEL_UP
     {
         get
         {
-            if (level >= 2 && level <= 20)
-                return  level * 5 + counter * 5;
+            if (currentLevel >= 2 && currentLevel <= 20)
+                return currentLevel * 5 + counter * 5;
+            else if (currentLevel > 20 && currentLevel <= 40)
+                return currentLevel * 6 + counter * 6;
             
             return  5; 
         }
@@ -48,7 +51,8 @@ public class Level : MonoBehaviour
     private void Start()
     {
         expBar.updateExpSlider(experience, TO_LEVEL_UP);
-        expBar.setLevelText(level);
+        expBar.setLevelText(currentLevel);
+        levelCompletion = GameObject.Find("World").GetComponent<LevelCompletion>();
     }
 
     internal void Upgrade(int selectedUpgradeID)
@@ -90,6 +94,7 @@ public class Level : MonoBehaviour
     {
         if (experience >= TO_LEVEL_UP)
         {
+            counter++;
             LevelUp();
         }
     }
@@ -103,11 +108,11 @@ public class Level : MonoBehaviour
         selectedUpgrade.AddRange(GetUpgrades(3));
 
 
-        upgrade.openPanel(selectedUpgrade);
-        counter++;
+        currentLevel += 1;
+        if(currentLevel < levelCompletion.winLevel)
+            upgrade.openPanel(selectedUpgrade);
         experience = 0;
-        level += 1;
-        expBar.setLevelText(level);
+        expBar.setLevelText(currentLevel);
     }
 
     public List<UpgradeData> GetUpgrades(int count)

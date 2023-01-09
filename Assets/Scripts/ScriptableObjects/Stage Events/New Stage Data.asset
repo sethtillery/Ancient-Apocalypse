@@ -12,4 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b6a84cadf135c64f8d9abca73a8545b, type: 3}
   m_Name: New Stage Data
   m_EditorClassIdentifier: 
-  stageEvents: []
+  stageEvents:
+  - time: 10
+    message: 
+    enemyToSpawn: {fileID: 0}
+    count: 0

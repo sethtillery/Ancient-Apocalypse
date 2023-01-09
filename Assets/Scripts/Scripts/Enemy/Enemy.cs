@@ -71,12 +71,14 @@ public class Enemy : MonoBehaviour, Damageable
     {
         hp -= damage;
 
-        if(hp < 1)
+        if (hp < 1)
         {
             enemyAnim.Play("Death");
             GetComponent<DropOnDestroy>().CheckDrop();
-           // targetCharacter.GetComponent<Level>().addExperience(expReward);
+            // targetCharacter.GetComponent<Level>().addExperience(expReward);
             Destroy(gameObject, .5f);
         }
+        else
+            enemyAnim.Play("TakeHit");
     }
 }

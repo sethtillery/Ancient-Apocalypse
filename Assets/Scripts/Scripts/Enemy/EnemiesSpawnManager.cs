@@ -11,10 +11,15 @@ public class EnemiesSpawnManager : MonoBehaviour
     GameObject player;
     float flyingEyeSpawnTime = 2f;
     float mushroomSpawnTime = 5f;
+    public int mushroomLeveltoSpawn;
+    public bool mushroom = false;
+    public bool eye = false;
+    Level level;
 
     private void Start()
     {
         player = GameManager.instance.playerTransform.gameObject;
+        level = GameObject.FindGameObjectWithTag("Player").GetComponent<Level>();
     }
 
     public void spawnEnemy()
@@ -58,10 +63,16 @@ public class EnemiesSpawnManager : MonoBehaviour
 
     private void Update()
     {
+        if (level.currentLevel == 3)
+            mushroom = true;
+
         spawnTimer -= Time.deltaTime;
-        if(spawnTimer <= 0)
+        if(level.currentLevel >= mushroomLeveltoSpawn || mushroom || eye)
         {
-            spawnEnemy();
+            if(spawnTimer <= 0)
+            {
+                spawnEnemy();
+            }
         }
 
     }
