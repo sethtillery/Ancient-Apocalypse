@@ -16,6 +16,7 @@ public class UpgradeManager : MonoBehaviour
 
     public void openPanel(List<UpgradeData> upgradeDatas)
     {               
+        Time.timeScale = 0;
         Clean();
         panel.SetActive(true);
 
@@ -25,7 +26,6 @@ public class UpgradeManager : MonoBehaviour
             upgradeButtons[i].Set(upgradeDatas[i]);
         }
 
-        Time.timeScale = 0;
     }
 
     public void Clean()

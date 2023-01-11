@@ -15,7 +15,12 @@ MonoBehaviour:
   upgradeType: 0
   Name: more damage
   icon: {fileID: 21300000, guid: 040f0016fe14fc14a9456c1702d4e49c, type: 3}
+  description: Increases damage to sword
   weaponData: {fileID: 11400000, guid: e7b1527966cf6044a81733d56a83de10, type: 2}
   weaponUpgradeStats:
     damage: 2
     timeToAttack: 0
+    numberOfAttacks: 0
+  item: {fileID: 0}
+  stats:
+    armor: 0

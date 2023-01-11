@@ -15,8 +15,12 @@ MonoBehaviour:
   upgradeType: 0
   Name: double attack
   icon: {fileID: 21300000, guid: 040f0016fe14fc14a9456c1702d4e49c, type: 3}
+  description: Adds a double attack to sword
   weaponData: {fileID: 11400000, guid: e7b1527966cf6044a81733d56a83de10, type: 2}
   weaponUpgradeStats:
     damage: 0
     timeToAttack: 0
     numberOfAttacks: 1
+  item: {fileID: 0}
+  stats:
+    armor: 0
