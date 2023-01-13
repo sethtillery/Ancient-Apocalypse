@@ -6,8 +6,8 @@ using UnityEngine.UI;
 
 public class CharacterStats : MonoBehaviour
 {
-    public int maxHP = 100;
-    public int currentHp = 100;
+    public int maxHP = 300;
+    public int currentHp = 300;
     Animator playerAnim;
     public bool isAlive = true;
     bool pauseGame = false;
@@ -28,6 +28,7 @@ public class CharacterStats : MonoBehaviour
     {
         playerAnim = GameObject.FindGameObjectWithTag("Player").GetComponent<Animator>();
         hpBar.setState(currentHp, maxHP);
+        currentHp = maxHP;
     }
     public void TakeDamage(int damage)
     {
