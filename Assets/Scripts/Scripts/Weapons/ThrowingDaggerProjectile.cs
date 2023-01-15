@@ -5,14 +5,20 @@ using UnityEngine;
 public class ThrowingDaggerProjectile : WeaponBase
 {
     Vector3 direction;
+    CharacterStats character;
 
-    [SerializeField] float speed;
-    [SerializeField] float damageSize = 0.7f;
+    public float speed;
+    public float damageSize = 0.7f;
     public int damage = 4;
 
     float ttl = 6f;
 
     bool hitDetected = false;
+
+    private void Start()
+    {
+        character = GameObject.FindGameObjectWithTag("Player").GetComponent<CharacterStats>();
+    }
 
     private void Update()
     {

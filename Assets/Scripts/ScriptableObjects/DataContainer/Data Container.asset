@@ -14,13 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coins: 0
   playerUpgrades:
-  - permanentUpgrades: 1
-    level: 0
-    maxLevel: 5
-    costToUpgrade: 200
   - permanentUpgrades: 0
     level: 0
     maxLevel: 3
+    costToUpgrade: 200
+  - permanentUpgrades: 1
+    level: 0
+    maxLevel: 5
     costToUpgrade: 200
   - permanentUpgrades: 2
     level: 0

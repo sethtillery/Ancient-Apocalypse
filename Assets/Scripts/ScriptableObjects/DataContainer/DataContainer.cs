@@ -6,8 +6,8 @@ using UnityEngine.UI;
 
 public enum PlayerPermanentUpgrades
 {
-    Hp,
     Damage,
+    Hp,
     Armor,
     FasterWeapons, 
     BiggerAttackRadius,
@@ -31,4 +31,10 @@ public class DataContainer : ScriptableObject
     public int coins;
 
     public List<PlayerUpgrades> playerUpgrades;
+
+    public int GetUpgradeLevel(PlayerPermanentUpgrades persistantUpgrade)
+    {
+        Debug.Log(playerUpgrades[(int)persistantUpgrade].level.ToString());
+        return playerUpgrades[(int)persistantUpgrade].level;
+    }
 }

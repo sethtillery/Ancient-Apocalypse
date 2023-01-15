@@ -100,5 +100,6 @@ MonoBehaviour:
     damage: 4
     timeToAttack: 3
     numberOfAttacks: 2
+    projectile: 1
   knifePrefab: {fileID: 3578993415797501857, guid: b31be424961cd684b8ce250a92b03f9e, type: 3}
   spread: 0.75

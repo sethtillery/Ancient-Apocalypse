@@ -3,7 +3,7 @@ using System.Collections;
 
 public class HeroKnight : MonoBehaviour {
 
-    [SerializeField] float      m_speed = 4.0f;
+    [SerializeField] public float      m_speed = 4.0f;
     private Animator            m_animator;
     private Rigidbody2D         m_body2d;
     private int                 m_currentAttack = 0;
@@ -24,6 +24,7 @@ public class HeroKnight : MonoBehaviour {
         m_body2d = GetComponent<Rigidbody2D>();
         lastHorizontalVector = 1f;
         lastVerticalVector = 1f;
+        m_speed += character.speedBonus;
     }
 
     void FixedUpdate()

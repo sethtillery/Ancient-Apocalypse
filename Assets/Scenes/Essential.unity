@@ -4720,6 +4720,10 @@ PrefabInstance:
       propertyPath: currentHp
       value: 300
       objectReference: {fileID: 0}
+    - target: {fileID: 1370287885, guid: 92c98e28397ce76408cc9673fb2236cd, type: 3}
+      propertyPath: dataContainer
+      value: 
+      objectReference: {fileID: 11400000, guid: 0f8e2213787246749aaff1d681785ac0, type: 2}
     - target: {fileID: 1502904050, guid: 92c98e28397ce76408cc9673fb2236cd, type: 3}
       propertyPath: startingWeapon
       value: 

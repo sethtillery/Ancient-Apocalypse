@@ -1793,7 +1793,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Raises damage dealt by 5% per level (max +25%).
+  m_Text: Raises damage dealt by 25% per level (max +75%).
 --- !u!222 &576714635
 CanvasRenderer:
   m_ObjectHideFlags: 0

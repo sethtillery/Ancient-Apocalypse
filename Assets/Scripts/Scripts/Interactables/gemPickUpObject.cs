@@ -8,6 +8,6 @@ public class gemPickUpObject : MonoBehaviour, iPickUpObject
 
     public void onPickup(CharacterStats character)
     {
-        character.level.addExperience(amount);
+        character.level.addExperience(amount * (int)character.xpBonus);
     }
 }

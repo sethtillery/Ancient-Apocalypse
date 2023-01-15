@@ -13,11 +13,14 @@ public class Sword_Weapon : WeaponBase
     [SerializeField] CharacterStats character;
     Collider2D[] colliders;
 
+
     private void Start()
     {
         character = GameObject.FindGameObjectWithTag("Player").GetComponent<CharacterStats>();
         hero = GameObject.FindGameObjectWithTag("Player").GetComponent<HeroKnight>();
         hero_anim = GameObject.FindGameObjectWithTag("Player").GetComponent<Animator>();
+        swordSize.x += character.attackRadiusBonus;
+        swordSize.y += character.attackRadiusBonus;
     }
 
     // Update is called once per frame
@@ -43,14 +46,15 @@ public class Sword_Weapon : WeaponBase
 
     private void ApplyDamage(Collider2D[] colliders)
     {
-        for(int i = 0; i < colliders.Length; i++)
+        int damage = GetDamage();
+        for (int i = 0; i < colliders.Length; i++)
         {
            // Debug.Log(colliders[i].gameObject.name);
             Damageable e = colliders[i].GetComponent<Damageable>();
             if(e != null)
             {
-                PostDamage(weaponStats.damage, colliders[i].transform.position);
-                e.TakeDamage(weaponStats.damage);
+                PostDamage(damage, colliders[i].transform.position);
+                e.TakeDamage(damage);
             }
         }       
     }
