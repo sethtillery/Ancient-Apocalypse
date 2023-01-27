@@ -53,7 +53,7 @@ public class Sword_Weapon : WeaponBase
             Damageable e = colliders[i].GetComponent<Damageable>();
             if(e != null)
             {
-                PostDamage(damage, colliders[i].transform.position);
+                PostDamage(weaponStats.damage, colliders[i].transform.position);
                 e.TakeDamage(damage);
             }
         }       

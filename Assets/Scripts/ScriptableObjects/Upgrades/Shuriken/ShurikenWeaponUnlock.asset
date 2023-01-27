@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bcf3a644025c404bb7b275166ba0d94, type: 3}
+  m_Name: ShurikenWeaponUnlock
+  m_EditorClassIdentifier: 
+  upgradeType: 0
+  Name: ShurikenWeaponUnlock
+  icon: {fileID: 0}
+  description: Unlocks Shuriken Weapon
+  weaponData: {fileID: 11400000, guid: 52e3ea94b8c93d84698d0300cffa181e, type: 2}
+  weaponUpgradeStats:
+    damage: 0
+    timeToAttack: 0
+    numberOfAttacks: 0
+  item: {fileID: 0}
+  stats:
+    armor: 0
