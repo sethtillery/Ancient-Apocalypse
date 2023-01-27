@@ -4742,7 +4742,7 @@ PrefabInstance:
       objectReference: {fileID: 1000728794}
     - target: {fileID: 2069780685, guid: 92c98e28397ce76408cc9673fb2236cd, type: 3}
       propertyPath: upgrades.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2069780685, guid: 92c98e28397ce76408cc9673fb2236cd, type: 3}
       propertyPath: upgrades.Array.data[0]
@@ -4751,7 +4751,7 @@ PrefabInstance:
     - target: {fileID: 2069780685, guid: 92c98e28397ce76408cc9673fb2236cd, type: 3}
       propertyPath: upgrades.Array.data[1]
       value: 
-      objectReference: {fileID: 11400000, guid: 43c8b1063f9da6643aa8bf5304aa81a8, type: 2}
+      objectReference: {fileID: 11400000, guid: f3f971d134b0cc04abdf2a8107d4b864, type: 2}
     - target: {fileID: 2069780685, guid: 92c98e28397ce76408cc9673fb2236cd, type: 3}
       propertyPath: upgrades.Array.data[2]
       value: 

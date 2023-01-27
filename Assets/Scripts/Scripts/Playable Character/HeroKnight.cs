@@ -29,8 +29,8 @@ public class HeroKnight : MonoBehaviour {
 
     void FixedUpdate()
     {
-        if(character.isAlive)
-            MoveCharacter();
+        //if(character.isAlive)
+        //    MoveCharacter();
     }
 
     private void MoveCharacter()
@@ -60,6 +60,8 @@ public class HeroKnight : MonoBehaviour {
     {
         if (character.isAlive)
         {
+            MoveCharacter();
+
             // Increase timer that controls attack combo
             m_timeSinceAttack += Time.deltaTime;
 

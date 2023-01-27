@@ -23,27 +23,6 @@ public class Sword_Weapon : WeaponBase
         swordSize.y += character.attackRadiusBonus;
     }
 
-    // Update is called once per frame
-  //  void Update()
-   // {
-        /**
-        if(character.isAlive)
-        {
-            if (hero.movement.x > 0)
-            {
-                swordRight.gameObject.SetActive(true);
-                swordLeft.gameObject.SetActive(false);
-            }
-
-            else if (hero.movement.x < 0)
-            {
-                swordRight.gameObject.SetActive(false);
-                swordLeft.gameObject.SetActive(true);
-            }
-        }
-        **/
-  //  }
-
     private void ApplyDamage(Collider2D[] colliders)
     {
         int damage = GetDamage();
