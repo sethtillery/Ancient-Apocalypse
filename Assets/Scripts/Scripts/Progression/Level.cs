@@ -13,13 +13,15 @@ public class Level : MonoBehaviour
     [SerializeField] List<UpgradeData> upgrades;
     List<UpgradeData> selectedUpgrade;
 
-   [SerializeField] List<UpgradeData> acquiredUpgrades;
+    [SerializeField] List<UpgradeData> acquiredUpgrades;
 
     WeaponManager weaponManager;
     passiveItems passiveItems;
 
     [SerializeField] List<UpgradeData> startUpgrades;
     LevelCompletion levelCompletion;
+
+    Coins Coins;
 
     int TO_LEVEL_UP
     {
@@ -53,6 +55,7 @@ public class Level : MonoBehaviour
         expBar.updateExpSlider(experience, TO_LEVEL_UP);
         expBar.setLevelText(currentLevel);
         levelCompletion = GameObject.Find("World").GetComponent<LevelCompletion>();
+        Coins = GetComponent<Coins>();
     }
 
     internal void Upgrade(int selectedUpgradeID)
@@ -113,6 +116,38 @@ public class Level : MonoBehaviour
             upgrade.openPanel(selectedUpgrade);
         experience = 0;
         expBar.setLevelText(currentLevel);
+        awardCoins(currentLevel);
+    }
+
+    private void awardCoins(int level)
+    {
+        switch(level)
+        {
+            case 2:
+                Coins.Add(level);
+                break;
+            case 10:
+                Coins.Add(level);
+                break;
+            case 15:
+                Coins.Add(level);
+                break;
+            case 20:
+                Coins.Add(level);
+                break;
+            case 25:
+                Coins.Add(level);
+                break;
+            case 30:
+                Coins.Add(level);
+                break;
+            case 35:
+                Coins.Add(level);
+                break;
+            case 40:
+                Coins.Add(level);
+                break;
+        }
     }
 
     public List<UpgradeData> GetUpgrades(int count)

@@ -182,7 +182,6 @@ GameObject:
   m_Component:
   - component: {fileID: 211644773}
   - component: {fileID: 211644772}
-  - component: {fileID: 211644774}
   m_Layer: 0
   m_Name: Enemies
   m_TagString: Untagged
@@ -202,12 +201,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71ec30694c3f933479821514163dc4ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 2239990612580791744, guid: 77e06ffbe969e9443b4615484750ee0d, type: 3}
+  enemyList:
+  - {fileID: 2239990612580791744, guid: 77e06ffbe969e9443b4615484750ee0d, type: 3}
+  - {fileID: 4317753751522298797, guid: e7179c07cb3d33e429ac930a79c1fff0, type: 3}
+  - {fileID: 6545090016317085632, guid: ef0721d06d6b1cc41a8c668a42f03bc8, type: 3}
   spawnArea: {x: 15, y: 8}
-  spawnTimer: 2
-  mushroomLeveltoSpawn: 3
-  mushroom: 0
+  eyeSpawnTimer: 2
+  mushroomSpawnTimer: 5
+  goblinSpawnTimer: 10
+  mushroomLevelToSpawn: 2
+  goblinLevelToSpawn: 7
   eye: 1
+  mushroom: 0
+  goblin: 0
 --- !u!4 &211644773
 Transform:
   m_ObjectHideFlags: 0
@@ -222,24 +228,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &211644774
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 211644771}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 71ec30694c3f933479821514163dc4ee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemy: {fileID: 4317753751522298797, guid: e7179c07cb3d33e429ac930a79c1fff0, type: 3}
-  spawnArea: {x: 15, y: 8}
-  spawnTimer: 5
-  mushroomLeveltoSpawn: 3
-  mushroom: 0
-  eye: 0
 --- !u!1 &343381651
 GameObject:
   m_ObjectHideFlags: 0

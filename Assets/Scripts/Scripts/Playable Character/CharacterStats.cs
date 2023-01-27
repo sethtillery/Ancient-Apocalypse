@@ -103,7 +103,6 @@ public class CharacterStats : MonoBehaviour
             isAlive = false;
             playerAnim.Play("Death");
             pauseGame = true;
-            GetComponent<CharacterGameOver>().GameOver();
         }
         hpBar.setState(currentHp, maxHP);
     }
@@ -121,8 +120,9 @@ public class CharacterStats : MonoBehaviour
         if (pauseGame)
             timer += Time.deltaTime;
         
-        if (pauseGame && timer > 2)
+        if (pauseGame && timer > 1)
         {
+            GetComponent<CharacterGameOver>().GameOver();
             hpBar.gameObject.SetActive(false);
             Time.timeScale = 0;
             pauseGame = false;

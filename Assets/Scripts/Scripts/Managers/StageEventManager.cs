@@ -25,7 +25,7 @@ public class StageEventManager : MonoBehaviour
 
             for(int i = 0; i < stageData.stageEvents[eventIndex].count; i++)
             {
-                enemiesManager.spawnEnemy();
+                //enemiesManager.spawnEnemy();
             }
 
             eventIndex += 1;

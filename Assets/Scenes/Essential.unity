@@ -3708,11 +3708,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1615317378}
   m_CullTransparentMesh: 1
---- !u!4 &1675809035 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4688997382623460628, guid: 92c98e28397ce76408cc9673fb2236cd, type: 3}
-  m_PrefabInstance: {fileID: 8675443287613813557}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1698973625
 GameObject:
   m_ObjectHideFlags: 0
@@ -4712,26 +4707,6 @@ PrefabInstance:
       propertyPath: gameOverPanel
       value: 
       objectReference: {fileID: 1076002506}
-    - target: {fileID: 1370287885, guid: 92c98e28397ce76408cc9673fb2236cd, type: 3}
-      propertyPath: maxHP
-      value: 300
-      objectReference: {fileID: 0}
-    - target: {fileID: 1370287885, guid: 92c98e28397ce76408cc9673fb2236cd, type: 3}
-      propertyPath: currentHp
-      value: 300
-      objectReference: {fileID: 0}
-    - target: {fileID: 1370287885, guid: 92c98e28397ce76408cc9673fb2236cd, type: 3}
-      propertyPath: dataContainer
-      value: 
-      objectReference: {fileID: 11400000, guid: 0f8e2213787246749aaff1d681785ac0, type: 2}
-    - target: {fileID: 1502904050, guid: 92c98e28397ce76408cc9673fb2236cd, type: 3}
-      propertyPath: startingWeapon
-      value: 
-      objectReference: {fileID: 11400000, guid: e7b1527966cf6044a81733d56a83de10, type: 2}
-    - target: {fileID: 1502904050, guid: 92c98e28397ce76408cc9673fb2236cd, type: 3}
-      propertyPath: weaponObjectsContainer
-      value: 
-      objectReference: {fileID: 1675809035}
     - target: {fileID: 2069780685, guid: 92c98e28397ce76408cc9673fb2236cd, type: 3}
       propertyPath: expBar
       value: 
@@ -4740,46 +4715,6 @@ PrefabInstance:
       propertyPath: upgrade
       value: 
       objectReference: {fileID: 1000728794}
-    - target: {fileID: 2069780685, guid: 92c98e28397ce76408cc9673fb2236cd, type: 3}
-      propertyPath: upgrades.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2069780685, guid: 92c98e28397ce76408cc9673fb2236cd, type: 3}
-      propertyPath: upgrades.Array.data[0]
-      value: 
-      objectReference: {fileID: 11400000, guid: b640b3be69aa7f84cbc6d6021d2d66a5, type: 2}
-    - target: {fileID: 2069780685, guid: 92c98e28397ce76408cc9673fb2236cd, type: 3}
-      propertyPath: upgrades.Array.data[1]
-      value: 
-      objectReference: {fileID: 11400000, guid: f3f971d134b0cc04abdf2a8107d4b864, type: 2}
-    - target: {fileID: 2069780685, guid: 92c98e28397ce76408cc9673fb2236cd, type: 3}
-      propertyPath: upgrades.Array.data[2]
-      value: 
-      objectReference: {fileID: 11400000, guid: 9438529259adcde4e92076097651db29, type: 2}
-    - target: {fileID: 2069780685, guid: 92c98e28397ce76408cc9673fb2236cd, type: 3}
-      propertyPath: upgrades.Array.data[3]
-      value: 
-      objectReference: {fileID: 11400000, guid: a551d1550e60a3045a610764f703ccba, type: 2}
-    - target: {fileID: 2069780685, guid: 92c98e28397ce76408cc9673fb2236cd, type: 3}
-      propertyPath: startUpgrades.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2069780685, guid: 92c98e28397ce76408cc9673fb2236cd, type: 3}
-      propertyPath: acquiredUpgrades.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2069780685, guid: 92c98e28397ce76408cc9673fb2236cd, type: 3}
-      propertyPath: startUpgrades.Array.data[0]
-      value: 
-      objectReference: {fileID: 11400000, guid: fed4bb091d9b681459843337be93830b, type: 2}
-    - target: {fileID: 2069780685, guid: 92c98e28397ce76408cc9673fb2236cd, type: 3}
-      propertyPath: acquiredUpgrades.Array.data[0]
-      value: 
-      objectReference: {fileID: 11400000, guid: 9438529259adcde4e92076097651db29, type: 2}
-    - target: {fileID: 2069780689, guid: 92c98e28397ce76408cc9673fb2236cd, type: 3}
-      propertyPath: data
-      value: 
-      objectReference: {fileID: 11400000, guid: 0f8e2213787246749aaff1d681785ac0, type: 2}
     - target: {fileID: 2069780689, guid: 92c98e28397ce76408cc9673fb2236cd, type: 3}
       propertyPath: coinsCountText
       value: 
