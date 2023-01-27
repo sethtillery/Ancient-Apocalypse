@@ -75,30 +75,8 @@ public class HeroKnight : MonoBehaviour {
             }
 
             // -- Handle Animations --
-            //Attack
-            
-            if(Input.GetMouseButtonDown(0) && m_timeSinceAttack > 0.25f)
-            {
-                m_currentAttack++;
-
-                // Loop back to one after third attack
-                if (m_currentAttack > 3)
-                    m_currentAttack = 1;
-
-                // Reset Attack combo if time since last attack is too large
-                if (m_timeSinceAttack > 1.0f)
-                    m_currentAttack = 1;
-
-                // Call one of three attack animations "Attack1", "Attack2", "Attack3"
-                m_animator.SetTrigger("Attack" + m_currentAttack);
-
-                // Reset timer
-                m_timeSinceAttack = 0.0f;
-            }
-            
-
             //Run
-            else if (Mathf.Abs(movement.x) > Mathf.Epsilon)
+            if (Mathf.Abs(movement.x) > Mathf.Epsilon)
             {
                 // Reset timer
                 m_delayToIdle = 0.05f;

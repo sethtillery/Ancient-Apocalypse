@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7bcf3a644025c404bb7b275166ba0d94, type: 3}
-  m_Name: ShurikenWeaponUnlock
+  m_Name: ShurikenMoreDamage
   m_EditorClassIdentifier: 
-  upgradeType: 2
-  Name: ShurikenWeaponUnlock
-  icon: {fileID: 21300000, guid: f2846f62220e80a4a9447a67109c55f8, type: 3}
-  description: Unlocks Shuriken Weapon
+  upgradeType: 0
+  Name: ShurikenMoreDamage
+  icon: {fileID: 21300000, guid: c6beda23332b7a841b8fa11998dc3614, type: 3}
+  description: Increases damage of shuriken
   weaponData: {fileID: 11400000, guid: 52e3ea94b8c93d84698d0300cffa181e, type: 2}
   weaponUpgradeStats:
-    damage: 0
+    damage: 2
     timeToAttack: 0
     numberOfAttacks: 0
   item: {fileID: 0}

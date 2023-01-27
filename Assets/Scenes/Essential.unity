@@ -959,7 +959,7 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 40
-    m_Alignment: 0
+    m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -1381,7 +1381,7 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 40
-    m_Alignment: 0
+    m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -4606,7 +4606,7 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 40
-    m_Alignment: 0
+    m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -4727,7 +4727,7 @@ PrefabInstance:
     - target: {fileID: 1502904050, guid: 92c98e28397ce76408cc9673fb2236cd, type: 3}
       propertyPath: startingWeapon
       value: 
-      objectReference: {fileID: 11400000, guid: 52e3ea94b8c93d84698d0300cffa181e, type: 2}
+      objectReference: {fileID: 11400000, guid: e7b1527966cf6044a81733d56a83de10, type: 2}
     - target: {fileID: 1502904050, guid: 92c98e28397ce76408cc9673fb2236cd, type: 3}
       propertyPath: weaponObjectsContainer
       value: 
@@ -4742,7 +4742,7 @@ PrefabInstance:
       objectReference: {fileID: 1000728794}
     - target: {fileID: 2069780685, guid: 92c98e28397ce76408cc9673fb2236cd, type: 3}
       propertyPath: upgrades.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2069780685, guid: 92c98e28397ce76408cc9673fb2236cd, type: 3}
       propertyPath: upgrades.Array.data[0]
@@ -4751,11 +4751,11 @@ PrefabInstance:
     - target: {fileID: 2069780685, guid: 92c98e28397ce76408cc9673fb2236cd, type: 3}
       propertyPath: upgrades.Array.data[1]
       value: 
-      objectReference: {fileID: 11400000, guid: 43c8b1063f9da6643aa8bf5304aa81a8, type: 2}
+      objectReference: {fileID: 11400000, guid: f3f971d134b0cc04abdf2a8107d4b864, type: 2}
     - target: {fileID: 2069780685, guid: 92c98e28397ce76408cc9673fb2236cd, type: 3}
       propertyPath: upgrades.Array.data[2]
       value: 
-      objectReference: {fileID: 11400000, guid: 2cc691a1a21c2d8448f6b2c8de82b841, type: 2}
+      objectReference: {fileID: 11400000, guid: 9438529259adcde4e92076097651db29, type: 2}
     - target: {fileID: 2069780685, guid: 92c98e28397ce76408cc9673fb2236cd, type: 3}
       propertyPath: upgrades.Array.data[3]
       value: 
@@ -4765,9 +4765,17 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2069780685, guid: 92c98e28397ce76408cc9673fb2236cd, type: 3}
+      propertyPath: acquiredUpgrades.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2069780685, guid: 92c98e28397ce76408cc9673fb2236cd, type: 3}
       propertyPath: startUpgrades.Array.data[0]
       value: 
       objectReference: {fileID: 11400000, guid: fed4bb091d9b681459843337be93830b, type: 2}
+    - target: {fileID: 2069780685, guid: 92c98e28397ce76408cc9673fb2236cd, type: 3}
+      propertyPath: acquiredUpgrades.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 9438529259adcde4e92076097651db29, type: 2}
     - target: {fileID: 2069780689, guid: 92c98e28397ce76408cc9673fb2236cd, type: 3}
       propertyPath: data
       value: 
