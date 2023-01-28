@@ -205,15 +205,23 @@ MonoBehaviour:
   - {fileID: 2239990612580791744, guid: 77e06ffbe969e9443b4615484750ee0d, type: 3}
   - {fileID: 4317753751522298797, guid: e7179c07cb3d33e429ac930a79c1fff0, type: 3}
   - {fileID: 6545090016317085632, guid: ef0721d06d6b1cc41a8c668a42f03bc8, type: 3}
+  - {fileID: 7844516673713939534, guid: fe9f9117aeced4143b563a1c87e17dc6, type: 3}
   spawnArea: {x: 15, y: 8}
   eyeSpawnTimer: 2
-  mushroomSpawnTimer: 5
+  mushroomSpawnTimer: 7
   goblinSpawnTimer: 10
-  mushroomLevelToSpawn: 2
+  skeletonSpawnTimer: 9
+  flyingEyeSpawnTime: 2
+  mushroomSpawnTime: 7
+  goblinTimeToSpawn: 10
+  skeletonTimeToSpawn: 9
+  mushroomLevelToSpawn: 3
   goblinLevelToSpawn: 7
+  skeletonLevelToSpawn: 10
   eye: 1
   mushroom: 0
   goblin: 0
+  skeleton: 0
 --- !u!4 &211644773
 Transform:
   m_ObjectHideFlags: 0

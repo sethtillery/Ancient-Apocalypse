@@ -10,19 +10,23 @@ public class EnemiesSpawnManager : MonoBehaviour
     [SerializeField] float eyeSpawnTimer;
     [SerializeField] float mushroomSpawnTimer;
     [SerializeField] float goblinSpawnTimer;
+    [SerializeField] float skeletonSpawnTimer;
     
     GameObject player;
-    float flyingEyeSpawnTime = 2f;
 
-    float mushroomSpawnTime = 5f;
-    [SerializeField] int mushroomLevelToSpawn = 3;
+    public float flyingEyeSpawnTime = 2f;
+    public float mushroomSpawnTime = 5f;
+    public float goblinTimeToSpawn = 10f;
+    public float skeletonTimeToSpawn = 6f;
 
-    float goblinTimeToSpawn = 10;
-    [SerializeField] int goblinLevelToSpawn = 7;
+    public int mushroomLevelToSpawn = 3;
+    public int goblinLevelToSpawn = 7;
+    public int skeletonLevelToSpawn = 10;
 
-    [SerializeField] bool eye = true;
-    [SerializeField] bool mushroom = false;
-    [SerializeField] bool goblin = false;
+    public bool eye = true;
+    public bool mushroom = false;
+    public bool goblin = false;
+    public bool skeleton = false;
     Level level;
 
     private void Start()
@@ -50,6 +54,8 @@ public class EnemiesSpawnManager : MonoBehaviour
             mushroomSpawnTimer = mushroomSpawnTime;
         else if (enemyToSpawn.tag == "Goblin")
             goblinSpawnTimer = goblinTimeToSpawn;
+        else if (enemyToSpawn.tag == "Skeleton")
+            skeletonSpawnTimer = skeletonTimeToSpawn;
     }
 
     private Vector3 GenerateRandomPosition()
@@ -75,21 +81,19 @@ public class EnemiesSpawnManager : MonoBehaviour
 
     private void Update()
     {
-        if (level.currentLevel == mushroomLevelToSpawn)
-            mushroom = true;
-        else if (level.currentLevel == goblinLevelToSpawn)
-            goblin = true;
-
         eyeSpawnTimer -= Time.deltaTime;
         mushroomSpawnTimer -= Time.deltaTime;
         goblinSpawnTimer -= Time.deltaTime;
+        skeletonSpawnTimer -= Time.deltaTime;
 
-        if(eye)
+        if (eye)
             if (eyeSpawnTimer <= 0) spawnEnemy(enemyList[0]);
         else if (mushroom)
             if (mushroomSpawnTimer <= 0) spawnEnemy(enemyList[1]);
-        else if(goblin)
+        else if (goblin)
             if (goblinSpawnTimer <= 0) spawnEnemy(enemyList[2]);
+        else if (skeleton)
+            if (skeletonSpawnTimer <= 0) spawnEnemy(enemyList[3]);
 
     }
 }

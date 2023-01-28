@@ -7,6 +7,7 @@ public class Level : MonoBehaviour
     [SerializeField] int experience = 0;
     public int currentLevel = 1;
     public int counter = 0;
+    [SerializeField] int xpNeededToLevelUp;
     [SerializeField] ExpBar expBar;
     [SerializeField] UpgradeManager upgrade;
 
@@ -23,14 +24,21 @@ public class Level : MonoBehaviour
 
     Coins Coins;
 
+    EnemiesSpawnManager enemiesSpawnManager;
     int TO_LEVEL_UP
     {
         get
         {
             if (currentLevel >= 2 && currentLevel <= 20)
-                return currentLevel * 5 + counter * 5;
+            {
+                xpNeededToLevelUp = currentLevel * 5 + counter * 5;
+                return xpNeededToLevelUp;
+            }
             else if (currentLevel > 20 && currentLevel <= 40)
-                return currentLevel * 6 + counter * 6;
+            {
+                xpNeededToLevelUp = currentLevel * 6 + counter * 6;
+                return xpNeededToLevelUp;
+            }
             
             return  5; 
         }
@@ -56,6 +64,7 @@ public class Level : MonoBehaviour
         expBar.setLevelText(currentLevel);
         levelCompletion = GameObject.Find("World").GetComponent<LevelCompletion>();
         Coins = GetComponent<Coins>();
+        enemiesSpawnManager = GameObject.Find("Enemies").GetComponent<EnemiesSpawnManager>();
     }
 
     internal void Upgrade(int selectedUpgradeID)
@@ -112,7 +121,15 @@ public class Level : MonoBehaviour
 
 
         currentLevel += 1;
-        if(currentLevel < levelCompletion.winLevel)
+
+        if (currentLevel == enemiesSpawnManager.mushroomLevelToSpawn)
+            enemiesSpawnManager.mushroom = true;
+        else if (currentLevel == enemiesSpawnManager.goblinLevelToSpawn)
+            enemiesSpawnManager.goblin = true;
+        else if (currentLevel == enemiesSpawnManager.skeletonLevelToSpawn)
+            enemiesSpawnManager.skeleton = true;
+
+        if (currentLevel < levelCompletion.winLevel)
             upgrade.openPanel(selectedUpgrade);
         experience = 0;
         expBar.setLevelText(currentLevel);
