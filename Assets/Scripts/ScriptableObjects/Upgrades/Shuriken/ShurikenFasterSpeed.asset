@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   upgradeType: 0
   Name: ShurikenFasterSpeed
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: c6beda23332b7a841b8fa11998dc3614, type: 3}
   description: Increases the speed of shuriken
   weaponData: {fileID: 11400000, guid: 52e3ea94b8c93d84698d0300cffa181e, type: 2}
   weaponUpgradeStats:
